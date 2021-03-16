@@ -7,7 +7,7 @@ public class RemoveDuplicate {
 
             // Start traversing elements
             int j = 0;
-            for (int i=0; i<n-1; i++)
+            for (int i=0; i<arr.length-1; i++)
                 // If current element is not equal
                 // to next element then store that
                 // current element
