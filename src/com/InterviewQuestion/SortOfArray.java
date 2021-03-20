@@ -20,7 +20,7 @@ public class SortOfArray {
                    array[j] = max;
                 }
             }
-
+            //System.out.println(array[i]);
 
         }
     }
@@ -34,6 +34,7 @@ public class SortOfArray {
         System.out.println(array[0]);
         System.out.println(array[1]);
         System.out.println(array[2]);
+        System.out.println(array[3]);
         //System.out.println(obj.sortOfArrayMethod());
     }
 
