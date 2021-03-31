@@ -12,6 +12,7 @@ package com.class17;
 
         String var1 = "Merim";
         StringBuilder sb1 = new StringBuilder(var1);
+        sb1.reverse();
 
         var1 = sb1.toString();
         System.out.println(var1);

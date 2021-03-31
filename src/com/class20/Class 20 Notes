@@ -1,0 +1,14 @@
+Recap:
+Constructor
+constructor is a special block of code that helps us initialize the instance fields/properties/variables
+of a class
+it is called automatically when we create an object of the class
+While defining Constructors we do not mention the return type not even void
+name of the constructor should be same as name of the class.
+this
+when we have the same name - to show Java what exctaly we need to use
+this can be use with parentheses to call the current class constructor.
+we use this to avoid code repetition.
+===========================
+inheritance in java is a mechanism/process that we can use to inherit properties and
+methods from another class to avoid code duplication.
