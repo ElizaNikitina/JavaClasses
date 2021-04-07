@@ -1,0 +1,34 @@
+Access modifiers:
+Access modifiers ar keywords that control the access to class
+members(properties,methods,constructor, inner classes and interfaces)
+private(can only be accessed in same class)
+protected (when we inherit from one class only available to the child)
+default(its not a keyword) Can be accessed in the same class and same package
+public Available to complete project
+================================
+Constructor:
+is a special block of code that helps us initialize the fields/properties/variables
+of a class
+
+class ABC{
+
+ABC(){
+
+}
+
+}
+
+Constructors are very similar to methods but without return types
+name of the construct shod be same as of our class
+=========================================================
+1) If we are in a separate class or if we are inside a static method in the same class
+we need an object of the class if we want to access the instance members(fields,methods)
+2) when we are declaring something the sequence does not matter the sequence matters when we
+are calling something
+
+Constructors rules
+-Same name as class name
+-no return type(not even void)
+-executes automatically during creating object
+
+
