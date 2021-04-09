@@ -7,6 +7,8 @@ public interface Webdriver {
     void maximizeWindow();
     void findElement();
 
+    String getTitle();
+
 }
 
 interface TakeScreenshot{
@@ -26,22 +28,28 @@ class ChromeDriver implements Webdriver, TakeScreenshot{
 
     @Override
     public void openBrowser() {
-        System.out.println("to open browser use method .navigate() or .get()");
+        System.out.println("Chrome to open browser use method .navigate() or .get()");
     }
 
     @Override
     public void closeBrowser() {
-        System.out.println("to close browser use method .close() or .quit()");
+        System.out.println("Chrome to close browser use method .close() or .quit()");
     }
 
     @Override
     public void maximizeWindow() {
-        System.out.println("to maximize window use method .manage().window().fullscreen()");
+        System.out.println("Chrome to maximize window use method .manage().window().fullscreen()");
     }
 
     @Override
     public void findElement() {
-        System.out.println("to find element use any locator");
+        System.out.println("Chrome to find element use any locator");
+    }
+
+    @Override
+    public String getTitle() {
+        String getTitle = "Chrome";
+        return getTitle;
     }
 
     @Override
@@ -54,21 +62,43 @@ class FirefoxDriver implements Webdriver{
 
     @Override
     public void openBrowser() {
-        System.out.println("to open browser use method .navigate() or .get()");
+        System.out.println("Firefox to open browser use method .navigate() or .get()");
     }
 
     @Override
     public void closeBrowser() {
-        System.out.println("to close browser use method .close() or .quit()");
+        System.out.println("Firefox to close browser use method .close() or .quit()");
     }
 
     @Override
     public void maximizeWindow() {
-        System.out.println("to maximize window use method .manage().window().fullscreen()");
+        System.out.println("Firefox to maximize window use method .manage().window().fullscreen()");
     }
 
     @Override
     public void findElement() {
-        System.out.println("to find element use any locator");
+        System.out.println("Firefox to find element use any locator");
     }
+
+    @Override
+    public String getTitle() {
+        String getTitle = "Firefox";
+        return getTitle;
+    }
+}
+
+ class Test{
+     public static void main(String[] args) {
+         Webdriver []  browserArray = {new ChromeDriver(), new FirefoxDriver()};
+
+         for(Webdriver browser: browserArray){
+             browser.openBrowser();
+             browser.openBrowser();
+             browser.findElement();
+             browser.getTitle();
+             browser.maximizeWindow();
+             System.out.println("---------");
+         }
+     }
+
 }
