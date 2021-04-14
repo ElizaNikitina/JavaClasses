@@ -41,7 +41,7 @@ public class Registration {
     public void setPassword(String password){
         if(!password.isEmpty()){
             if(password.length()>6){
-                if(!password.equals(userName)) {
+                if(!password.contains(userName)) {
                     this.password = password;
                 }else{
                     System.out.println("password cannot contain user name");
