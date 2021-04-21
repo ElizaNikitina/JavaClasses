@@ -36,7 +36,7 @@ public class HomeWork {
 
         System.out.println("--- getting keys using for each loop ---- ");
         for(int k:keys) {
-            System.out.println("Key from building map= "+k+":"+building.get(k));
+            System.out.println("Key from building map= "+k+" : "+building.get(k));
         }
 
         //how to get all values
