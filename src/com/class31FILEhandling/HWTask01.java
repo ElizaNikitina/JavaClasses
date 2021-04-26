@@ -5,9 +5,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -16,7 +18,7 @@ public class HWTask01 {
 
     public static void main(String[] args) throws IOException, InterruptedException {
 
-        String filePath = "/Users/Eliza/Desktop/IntelllijIDEA/JavaClasses/src/configs/task.properties";
+        String filePath = System.getProperty("user.dir") + "/configs/task.properties";
         FileInputStream fis = new FileInputStream(filePath);
 
         Properties prop = new Properties();
@@ -57,6 +59,32 @@ public class HWTask01 {
         driver.findElement(By.xpath("//input[@name='reg_passwd__']")).sendKeys(password);
         Thread.sleep(3000);
 
+
+        WebElement day = driver.findElement(By.xpath("//select[@id='day']"));
+        Select dayDD = new Select(day);
+
+        List<WebElement> options = dayDD.getOptions();
+        System.out.println("Number of Options in the DD:: " + options.size());
+
+        dayDD.selectByIndex(29);
+
+        WebElement month = driver.findElement(By.xpath("//select[@id='month']"));
+        Select monthDD = new Select(month);
+
+        monthDD.selectByValue("11");
+
+
+        WebElement year = driver.findElement(By.xpath("//select[@id='year']"));
+        Select yearDD = new Select(year);
+
+        yearDD.selectByValue("1982");
+
+        Thread.sleep(3000);
+
+        driver.findElement(By.xpath("//input[@value='1']")).click();
+        driver.findElement(By.xpath("//button[contains(text(),'Sign') and @name='websubmit']")).click();
+
+        driver.quit();
 
     }
 }
