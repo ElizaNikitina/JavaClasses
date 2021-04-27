@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class CreateNewFiles {
     public static void main(String[] args) throws IOException {
-        String path = System.getProperty("user.dir") + "/src/ExcellData/myFile.xlsx";
+        String path = System.getProperty("user.dir") + "/src/ExcelData/myFile.xlsx";
 
         System.out.println(path);
 

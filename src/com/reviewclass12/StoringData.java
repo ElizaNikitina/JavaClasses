@@ -12,7 +12,7 @@ import java.util.Map;
 
 public class StoringData {
     public static void main(String[] args) throws IOException {
-        String path = System.getProperty("user.dir") + "/src/ExcellData/Amazon_test.xlsx";
+        String path = System.getProperty("user.dir") + "/src/ExcelData/Amazon_test.xlsx";
 
         System.out.println(path);
 
