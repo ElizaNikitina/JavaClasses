@@ -17,7 +17,7 @@ public class ProcessDataFromExcel {
         String path = System.getProperty("user.dir") + "/src/ExcelData/Test01.xlsx";
         FileInputStream fis = new FileInputStream(path);
         Workbook book = new XSSFWorkbook(fis);
-        Sheet sheet = book.getSheet("Sheet1");
+        Sheet sheet = book.getSheet("Sheet2");
 
         int rows = sheet.getPhysicalNumberOfRows();
         int cols = sheet.getRow(0).getLastCellNum();
@@ -35,5 +35,10 @@ public class ProcessDataFromExcel {
         }
 
         System.out.println(listMap);
+
+        System.out.println("----accessing each map separately------");
+        for( Map<String, String> l :listMap){
+            System.out.println(l);
+        }
     }
 }
