@@ -9,21 +9,21 @@ public class PalindromOrNot {
         Scanner scan = new Scanner(System.in);
         System.out.println("Please enter your word");
 
-        String palindrom = scan.nextLine();
+        String palindrome = scan.nextLine();
 
         String reverse= "";
 
-        for(int i=palindrom.length()-1; i>=0; i--){
-            reverse+=palindrom.charAt(i);
+        for(int i=palindrome.length()-1; i>=0; i--){
+            reverse+=palindrome.charAt(i);
         }
 
-        if(palindrom.equals(reverse)){
-            System.out.println("This word is palindrom");
+        if(palindrome.equals(reverse)){
+            System.out.println("This word is palindrome");
         }else{
-            System.out.println("This is not a palindrom");
+            System.out.println("This is not a palindrome");
         }
 
-        return palindrom;
+        return palindrome;
     }
 
     static String palindr(String palind){
@@ -32,9 +32,9 @@ public class PalindromOrNot {
             rever+=palind.charAt(i);
         }
         if(palind.equals(rever)){
-            System.out.println("This word is palindrom");
+            System.out.println("This word is palindrome");
         }else{
-            System.out.println("This is not a palindrom");
+            System.out.println("This is not a palindrome");
         }
         return palind;
     }

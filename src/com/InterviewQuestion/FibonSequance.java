@@ -14,11 +14,12 @@ public class FibonSequance {
 			b=1;
 			for(int i=1; i<=10; i++) {
 
+				System.out.print(a + " ");
 				c=a+b;
 				a=b;
 				b=c;
 
-				System.out.print(a + " ");
+				//System.out.print(a + " ");
 
 		}
 			return a;
